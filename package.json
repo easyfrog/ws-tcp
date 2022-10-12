@@ -1,0 +1,24 @@
+{
+  "name": "ws-tcp",
+  "version": "1.0.0",
+  "description": "ws & tcp server",
+  "main": "index.js",
+  "scripts": {
+    "image": "docker build -t ws-tcp .",
+    "dev": "docker run --name=ws-tcp -p 3010:3010 -p 3011:3011 ws-tcp",
+    "run": "docker run --name=ws-tcp -d -p 3010:3010 -p 3011:3011 ws-tcp",
+    "tar": "docker save -o ws-tcp.tar ws-tcp",
+    "start": "pm2-runtime start index.js"
+  },
+  "keywords": [
+    "ws",
+    "tcp",
+    "nodejs",
+    "server"
+  ],
+  "author": "ooomap.com",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^8.9.0"
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ws-tcp</title>
+</head>
+<body>
+    
+    <script>
+        //创建客户端的WebSocket对象
+        var socket = new WebSocket('ws://localhost:3011/ws')
+
+        console.log(socket);
+
+        //给socket绑定message事件
+        socket.onmessage = function (event) {
+            console.log('message', event.data);    
+        }
+
+        //给socket绑定open事件 与服务器建立连接
+        socket.onopen = function (event) {
+            console.log('websocket connected')
+        }
+        
+    </script>
+
+</body>
+</html>
