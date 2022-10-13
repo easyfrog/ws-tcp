@@ -33,6 +33,12 @@ docker run --name=ws-tcp -d -p 3010:3010 -p 3011:3011 ws-tcp
 docker image rm imageid[4]
 ```
 
+## 查看docker占用资源情况
+
+```bash
+docker stats
+```
+
 ## 在服务器上运行ws-tcp镜像
 
 因为此工程只需要有一个镜像, 所以没有用到`docker-compose`
