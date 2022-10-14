@@ -39,6 +39,17 @@ docker image rm imageid[4]
 docker stats
 ```
 
+## 查看docker容器日志
+
+```bash
+# 静态得到logs
+docker logs container-name
+# 静态得到最后的10条log
+docker logs --tail 10 container-name
+# 跟踪日志输出
+docker logs -f container-name
+```
+
 ## 在服务器上运行ws-tcp镜像
 
 因为此工程只需要有一个镜像, 所以没有用到`docker-compose`
