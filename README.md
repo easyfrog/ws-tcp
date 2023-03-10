@@ -22,7 +22,7 @@ docker rm containerid[4]
 ## 运行ws-tcp容器
 
 ```bash
-# 3010 为 tcp 监听端口
+# 3010 为 tcp 监听端口 -d: 后台运行
 docker run --name=ws-tcp -d -p 3010:3010 -p 3011:3011 ws-tcp
 ```
 
